@@ -1,23 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Registeration from "./Components/Registeration";
-import profile from "./Components/profile";
-
+import ProductInfo from "./Component/ProductInfo"
 import "./App.css";
-//import ForgotPwd from './Components/ForgotPwd';
+
 
 function App() {
   return (
-    <>
-      <profile />
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Registeration} />
-
-          <Route exact path="/profile" component={profile} />
-        </Switch>
-      </Router>
-    </>
+    
+    <div className="App">
+      <ProductInfo />
+    </div>
+    
   );
 }
 

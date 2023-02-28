@@ -26,7 +26,7 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link to={"/Component/Dashboard/LineChart"} >
+                <Link to={"/Component/LineChart"} >
                   Line Chart
                 </Link>
               </li>
@@ -34,7 +34,7 @@ function App() {
             <Route path="/Component/ProductInfo" component={ProductInfo} />
             <Route path="/Component/Registeration" component={Register} />
             <Route path="/Component/login" component={LoginPage} />
-            <Route path="/Component/Dashboard/LineChart" component={LineChart} />
+            <Route path="/Component/LineChart" component={LineChart} />
           </Switch>
         </div>
       </Router>

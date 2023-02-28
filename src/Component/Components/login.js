@@ -1,18 +1,13 @@
 import React from 'react';
 import {
-  Checkbox,
   Grid,
   TextField,
-  FormControlLabel,
   Paper,
   Button
 } from '@mui/material';
-const LoginPage = () => {
-  const [checked, setChecked] = React.useState(true);
+import "./register.css";
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
+const LoginPage = () => {
 
   return (
     <div style={{ padding: 30 }}>
@@ -25,23 +20,10 @@ const LoginPage = () => {
           alignItems={'center'}
         >
           <Grid item xs={12}>
-            <TextField label="Username"></TextField>
+            <TextField label="Username" required></TextField>
           </Grid>
           <Grid item xs={12}>
-            <TextField label="Password" type={'password'}></TextField>
-          </Grid>
-          <Grid item xs={12}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={checked}
-                  onChange={handleChange}
-                  label={'Keep me logged in'}
-                  inputProps={{ 'aria-label': 'primary checkbox' }}
-                />
-              }
-              label="Keep me logged in"
-            />
+            <TextField label="Password" type={'password'} required></TextField>
           </Grid>
           <Grid item xs={12}>
             <Button fullWidth> Login </Button>

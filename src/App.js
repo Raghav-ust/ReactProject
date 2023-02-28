@@ -3,6 +3,7 @@ import ProductInfo from "./Component/ProductInfo"
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Register from "./Component/Components/Registeration";
+import LoginPage from "./Component/Components/login"; 
 import LineChart from "./Component/Dashboard/LineChart";
 
 function App() {
@@ -20,14 +21,20 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link to={"/Component/Dashboard/LineChart"}>
+                <Link to={"/Component/login"} >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link to={"/Component/Dashboard/LineChart"} >
                   Line Chart
                 </Link>
               </li>
           <Switch>
             <Route path="/Component/ProductInfo" component={ProductInfo} />
-            <Route path="/Component/Dashboard/LineChart" component={LineChart} />
             <Route path="/Component/Registeration" component={Register} />
+            <Route path="/Component/login" component={LoginPage} />
+            <Route path="/Component/Dashboard/LineChart" component={LineChart} />
           </Switch>
         </div>
       </Router>
